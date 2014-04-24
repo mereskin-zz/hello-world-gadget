@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A "Hello, world" gadget</title>
+  <link rel="stylesheet" href="gadget.base.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="bower_components/versal-player-api/dist/api.js"></script>
+  <script src="bower_components/vue/dist/vue.min.js"></script>
+</head>
+
+<body v-class="editable: editable">
+<div class="toolbar" v-show="editable">
+  <button v-on="click: requestAsset">{{ buttonLabel }}</button>
+</div>
+
+<img v-on="load: imageLoaded" v-attr="src: src" />
+
+<div class="heading">The hello
+  <span class="word" style="color: {{color}}; font-style: {{fontstyle}}"
+    v-attr="contenteditable: editable"
+    v-on="click: toggleFontStyle"
+    v-model="word"></span>
+  gadget</div>
+
+<script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

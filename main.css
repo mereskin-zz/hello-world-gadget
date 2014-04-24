@@ -1,0 +1,57 @@
+body {
+  background: green;
+  margin-bottom: -3px;
+}
+
+button {
+  font-size: 1.4em;
+  padding: 0.3em 1.3em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.editable {
+  background: red;
+}
+
+.heading {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  color: white;
+  cursor: default;
+}
+
+.word {
+  cursor: pointer;
+  user-select: none;
+}
+
+.word[contenteditable] {
+  border-bottom: 2px dotted white;
+  cursor: text;
+  user-select: text;
+}
+
+.word:empty:before {
+  content: 'word';
+  color: white;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  line-height: 50px;
+  transition: opacity 500ms;
+  text-align: right;
+}
