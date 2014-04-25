@@ -21,7 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "versal-player-api": "*",
+    "versal-player-api": "git@github.com:Versal/player-api",
     "vue": "~0.10.3"
   }
 }
