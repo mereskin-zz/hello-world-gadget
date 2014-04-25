@@ -1,5 +1,5 @@
 Hey, to run that you need SDK @ preview-element branch.
 
-Run it w/ `versal preview --iframe`
+Install dependencies with `bower install`.
 
-bower_components is a joke, it is just static folder.
+Run it w/ `versal preview --iframe`
