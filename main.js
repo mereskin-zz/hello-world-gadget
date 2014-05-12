@@ -1,7 +1,11 @@
 var player = new VersalPlayerAPI();
 
 var Gadget = function(options) {
-  this.model = {};
+  this.model = {
+    word: 'foo',
+    color: 'red',
+    imageid: null
+  };
   this.el = document.body;
 
   player.on('editableChanged', this.setModelAttribute.bind(this, 'editable'));
