@@ -8,7 +8,7 @@ var Gadget = function(options) {
   };
   this.el = document.body;
 
-  player.on('editableChanged', this.setModelAttribute.bind(this, 'editable'));
+  player.on('editableChanged', this.setEditable.bind(this));
   player.on('attributesChanged', this.setModelAttributes.bind(this));
   player.on('learnerStateChanged', this.setModelAttributes.bind(this));
   player.on('assetSelected', this.assetSelected.bind(this));
@@ -55,6 +55,10 @@ Gadget.prototype.render = function(){
 
   this.vm.$watch('word', player.setAttribute.bind(player, 'word'));
   this.vm.$watch('fontstyle', player.setLearnerAttribute.bind(player, 'fontstyle'));
+};
+
+Gadget.prototype.setEditable = function(crazyObject){
+  this.setModelAttribute('editable', crazyObject.editable);
 };
 
 Gadget.prototype.setModelAttribute = function(key, value) {
