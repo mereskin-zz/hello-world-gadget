@@ -1,5 +1,6 @@
-Hey, to run that you need SDK @ preview-element branch.
+# hello-world-gadget
 
-Install dependencies with `bower install`.
+To install and run, do:
 
-Run it w/ `versal preview --iframe`
+     bower install
+     versal preview
